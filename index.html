@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TradePilot AI — Your Intelligent Import & Export Assistant</title>
+  <meta name="description" content="TradePilot AI helps MSMEs, startups, and first-time exporters navigate global trade journeys with AI market intelligence, customs procedures, and regulatory compliance.">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ECFDF5',
+              100: '#D1FAE5',
+              500: '#10B981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065F46',
+              900: '#064E3B',
+              950: '#022C22'
+            },
+            obsidian: {
+              800: '#1F1F23',
+              850: '#18181B',
+              900: '#121215',
+              950: '#09090B',
+              1000: '#000000'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(4px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          },
+          animation: {
+            fadeIn: 'fadeIn 0.2s ease-out forwards'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- React 18 & ReactDOM -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Babel Standalone for JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #09090B;
+      color: #FAFAFA;
+      -webkit-font-smoothing: antialiased;
+    }
+    /* Logo Seamless Merge Utility */
+    .logo-merged {
+      mix-blend-mode: screen;
+      background-color: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #121215;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #27272A;
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #3F3F46;
+    }
+    @media print {
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-obsidian-950 text-zinc-100 antialiased selection:bg-emerald-600 selection:text-white">
+  
+  <div id="root"></div>
+
+  <!-- Load Data & Utility Modules -->
+  <script type="text/babel" src="js/data/tradeData.js"></script>
+  <script type="text/babel" src="js/utils/nlpParser.js"></script>
+
+  <!-- Load React Components -->
+  <script type="text/babel" src="js/components/LoginPage.js"></script>
+  <script type="text/babel" src="js/components/LandingPage.js"></script>
+  <script type="text/babel" src="js/components/Sidebar.js"></script>
+  <script type="text/babel" src="js/components/Header.js"></script>
+  <script type="text/babel" src="js/components/DashboardOverview.js"></script>
+  <script type="text/babel" src="js/components/TradeJourneyView.js"></script>
+  <script type="text/babel" src="js/components/AiAssistantView.js"></script>
+  <script type="text/babel" src="js/components/MarketIntelligenceView.js"></script>
+  <script type="text/babel" src="js/components/DocumentsView.js"></script>
+  <script type="text/babel" src="js/components/RegulationsView.js"></script>
+  <script type="text/babel" src="js/components/ShippingView.js"></script>
+  <script type="text/babel" src="js/components/TrustLayerView.js"></script>
+  <script type="text/babel" src="js/components/OfficialSourcesView.js"></script>
+  <script type="text/babel" src="js/components/NextStepsView.js"></script>
+  <script type="text/babel" src="js/components/TradeChangeModal.js"></script>
+
+  <!-- Load Main Application Mount -->
+  <script type="text/babel" src="js/App.js"></script>
+</body>
+</html>
